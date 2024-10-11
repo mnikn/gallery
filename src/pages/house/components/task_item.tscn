@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dphjfm5hmtfnr"]
+
+[ext_resource type="FontFile" uid="uid://dje1ekj8n7ehe" path="res://assets/fonts/Noto_Sans_SC/NotoSansSC-Medium.otf" id="1_idmer"]
+
+[node name="Item" type="Button"]
+custom_minimum_size = Vector2(240, 42)
+offset_right = 240.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("1_idmer")
+text = "检查地下室的箱子"
+alignment = 0

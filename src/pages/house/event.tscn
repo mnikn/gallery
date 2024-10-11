@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgpubgf1m5bcn"]
+
+[ext_resource type="Script" path="res://src/pages/house/event.gd" id="1_2c37y"]
+[ext_resource type="PackedScene" uid="uid://niftqhxmw02w" path="res://src/pages/house/house.tscn" id="1_4geiq"]
+
+[node name="Event" instance=ExtResource("1_4geiq")]
+script = ExtResource("1_2c37y")
+
+[node name="Laisha" parent="." index="7"]
+position = Vector2(456, 528)
+
+[node name="Joey" parent="." index="8"]
+position = Vector2(392, 464)
+
+[node name="Collision" parent="Joey/InteractionArea" index="1"]
+position = Vector2(0, 24)
+
+[node name="Shenqi" parent="." index="9"]
+position = Vector2(328, 472)
+
+[editable path="Laisha"]
+[editable path="Laisha/InteractionArea"]
+[editable path="Joey"]
+[editable path="Joey/InteractionArea"]
+[editable path="Shenqi"]
+[editable path="Shenqi/InteractionArea"]
+[editable path="Interactions/Window"]
+[editable path="Interactions/Underground"]
+[editable path="Interactions/Bookcase"]
+[editable path="Interactions/Outside"]
+[editable path="Interactions/FirePlace"]
+[editable path="Interactions/Table"]

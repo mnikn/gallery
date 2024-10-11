@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://bedp2rdb5hgux"]
+
+[ext_resource type="Texture2D" uid="uid://dy5k2edhlje7o" path="res://assets/scenes/10-01/resturan.png" id="1_4t7cq"]
+[ext_resource type="Script" path="res://src/Character.gd" id="2_abarv"]
+[ext_resource type="Texture2D" uid="uid://babps7xq05410" path="res://assets/man.png" id="3_guqdh"]
+[ext_resource type="Script" path="res://src/components/animation_sprite.gd" id="4_ibsn5"]
+[ext_resource type="PackedScene" uid="uid://hodd267kuwec" path="res://src/components/interaction_area.tscn" id="5_mgfgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpo8k"]
+size = Vector2(64, 107.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ungab"]
+size = Vector2(76, 114)
+
+[node name="Resturan" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.133196, 0.133196, 0.133196, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -89.0
+offset_right = 145.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+pivot_offset = Vector2(160, 90)
+texture = ExtResource("1_4t7cq")
+
+[node name="Shenqi" type="CharacterBody2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(945, 280)
+collision_mask = 17
+script = ExtResource("2_abarv")
+character_texture_path = "res://assets/characters/shenqi"
+enabled = true
+input_control = true
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="Shenqi"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("3_guqdh")
+script = ExtResource("4_ibsn5")
+
+[node name="Camera2D" type="Camera2D" parent="Shenqi"]
+enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 3008
+limit_bottom = 2240
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+rotation_smoothing_enabled = true
+
+[node name="Collision" type="CollisionShape2D" parent="Shenqi"]
+position = Vector2(0, 21.75)
+shape = SubResource("RectangleShape2D_vpo8k")
+
+[node name="InteractionArea" parent="Shenqi" instance=ExtResource("5_mgfgy")]
+monitoring = false
+
+[node name="Label" parent="Shenqi/InteractionArea/InputHintWrapper/InputHint" index="0"]
+layout_mode = 2
+
+[node name="Content" parent="Shenqi/InteractionArea/InputHintWrapper/InputHint" index="1"]
+layout_mode = 2
+
+[node name="Collision" parent="Shenqi/InteractionArea" index="1"]
+position = Vector2(0, 15)
+shape = SubResource("RectangleShape2D_ungab")
+
+[editable path="Shenqi/InteractionArea"]

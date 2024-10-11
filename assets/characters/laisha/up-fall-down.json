@@ -1,0 +1,19 @@
+{
+  "frames": [
+    {
+      "frame": 1,
+      "duration": 250,
+      "collision": {
+        "x": 16,
+        "y": 8,
+        "width": 17,
+        "height": 37,
+        "shapeType": "retangle"
+      }
+    }
+  ],
+  "animation": {
+    "loop": false,
+    "img": "C:\\game_projects\\snow-mountain-14-days\\assets\\characters\\laisha\\up-fall-down.png"
+  }
+}

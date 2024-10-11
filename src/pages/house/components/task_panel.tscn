@@ -1,0 +1,119 @@
+[gd_scene load_steps=5 format=3 uid="uid://fix2kes44wob"]
+
+[ext_resource type="Script" path="res://src/pages/house/components/task_panel.gd" id="1_sll3k"]
+[ext_resource type="Script" path="res://src/components/relative_canvas_layer.gd" id="3_2hegs"]
+[ext_resource type="FontFile" uid="uid://blna6hdacr5yk" path="res://assets/fonts/Noto_Sans_SC/NotoSansSC-Bold.otf" id="3_jwnr3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4i12l"]
+
+[node name="TaskPanel" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -144.0
+offset_right = 288.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_sll3k")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 564.0
+offset_bottom = 276.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+offset_right = 240.0
+offset_bottom = 264.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ScrollContainer"]
+theme_override_constants/separation = 6
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
+offset_left = 252.0
+offset_right = 552.0
+offset_bottom = 264.0
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/PanelContainer"]
+offset_right = 300.0
+offset_bottom = 264.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Desc" type="RichTextLabel" parent="MarginContainer/HBoxContainer/PanelContainer/MarginContainer"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 288.0
+offset_bottom = 252.0
+theme_override_fonts/normal_font = ExtResource("3_jwnr3")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_2hegs")
+
+[node name="ConfirmPanel" type="Panel" parent="CanvasLayer"]
+visible = false
+offset_right = 208.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4i12l")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ConfirmPanel"]
+offset_right = 208.0
+offset_bottom = 56.0
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ConfirmPanel/MarginContainer"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 202.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="Confirm" type="Button" parent="CanvasLayer/ConfirmPanel/MarginContainer/HBoxContainer"]
+offset_right = 92.0
+offset_bottom = 44.0
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_jwnr3")
+text = "确认
+"
+
+[node name="Cancel" type="Button" parent="CanvasLayer/ConfirmPanel/MarginContainer/HBoxContainer"]
+offset_left = 104.0
+offset_right = 196.0
+offset_bottom = 44.0
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_jwnr3")
+text = "取消"
+
+[connection signal="pressed" from="CanvasLayer/ConfirmPanel/MarginContainer/HBoxContainer/Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="CanvasLayer/ConfirmPanel/MarginContainer/HBoxContainer/Cancel" to="." method="_on_cancel_pressed"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bshv6o728m7iu"]
+
+[ext_resource type="Script" path="res://src/components/character/character.gd" id="1"]
+[ext_resource type="Script" path="res://src/components/aseprite_animation_sprite.gd" id="2_cf64n"]
+[ext_resource type="Script" path="res://src/components/character/state_manager/base_state_manager.gd" id="3_8wfwb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ef6f"]
+
+[node name="Character" type="CharacterBody2D"]
+collision_mask = 17
+script = ExtResource("1")
+
+[node name="Skin" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+script = ExtResource("2_cf64n")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1ef6f")
+
+[node name="StateManager" type="Node" parent="."]
+script = ExtResource("3_8wfwb")

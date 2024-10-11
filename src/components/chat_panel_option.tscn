@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://24lna8w84dpp"]
+
+[ext_resource type="FontFile" uid="uid://blna6hdacr5yk" path="res://assets/fonts/Noto_Sans_SC/NotoSansSC-Bold.otf" id="1_jhsu0"]
+
+[node name="OptionButton" type="Button"]
+custom_minimum_size = Vector2(0, 32)
+offset_right = 240.0
+offset_bottom = 32.0
+size_flags_horizontal = 6
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_jhsu0")

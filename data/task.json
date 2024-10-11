@@ -1,0 +1,14 @@
+[
+  {
+    "name": "0d71bb655614-4d76-b573-2a3ab86e4739",
+    "desc": "245f1b0f2333-4c08-b250-05cd4cadab2c",
+    "id": "check_underground_box",
+    "target_storylet": "house.events.check_underground_box"
+  },
+  {
+    "id": "check_bookcase",
+    "name": "b6f83c60ec06-47b0-a9f0-ba4d447ac9cf",
+    "desc": "c8afa102f742-42d9-b2b0-064d316da3a5",
+    "target_storylet": "house.events.check_bookcase"
+  }
+]

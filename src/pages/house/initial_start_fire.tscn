@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://rm2ha8utu10n"]
+
+[ext_resource type="PackedScene" uid="uid://niftqhxmw02w" path="res://src/pages/house/house.tscn" id="1_0envd"]
+[ext_resource type="Script" path="res://src/pages/house/initial_start_fire.gd" id="2_4bgsx"]
+
+[node name="InitialStartFire" instance=ExtResource("1_0envd")]
+script = ExtResource("2_4bgsx")
+initial_storylet = "house.events.start_fire"
+
+[node name="Laisha" parent="." index="7"]
+position = Vector2(1022, 440)
+
+[node name="InteractionArea" parent="Laisha" index="3"]
+storylets = ["house.talk_laisha_find_joey", "house.talk_laisha_with_joey1", "house.talk_laisha_find_food"]
+
+[node name="Joey" parent="." index="8"]
+position = Vector2(950, 344)
+
+[node name="InteractionArea" parent="Joey" index="3"]
+enabled = false
+
+[node name="Shenqi" parent="." index="9"]
+position = Vector2(936, 440)
+
+[node name="Outside" parent="Interactions" index="3"]
+storylets = ["house.outside_find_joey"]
+
+[editable path="Laisha"]
+[editable path="Laisha/InteractionArea"]
+[editable path="Joey"]
+[editable path="Joey/InteractionArea"]
+[editable path="Shenqi"]
+[editable path="Shenqi/InteractionArea"]
+[editable path="Interactions/Window"]
+[editable path="Interactions/Underground"]
+[editable path="Interactions/Bookcase"]
+[editable path="Interactions/Outside"]
+[editable path="Interactions/FirePlace"]
+[editable path="Interactions/Table"]

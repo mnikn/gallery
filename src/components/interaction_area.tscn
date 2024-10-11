@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://hodd267kuwec"]
+
+[ext_resource type="Script" path="res://src/components/interaction_area.gd" id="1_judnf"]
+[ext_resource type="Script" path="res://src/components/relative_canvas_layer.gd" id="2_i6mml"]
+[ext_resource type="FontFile" uid="uid://blna6hdacr5yk" path="res://assets/fonts/Noto_Sans_SC/NotoSansSC-Bold.otf" id="2_ua6k1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_clqyg"]
+content_margin_left = 6.0
+content_margin_top = 2.0
+content_margin_right = 6.0
+content_margin_bottom = 2.0
+bg_color = Color(0.619608, 0.752941, 0.819608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0588235, 0.129412, 0.25098, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 20
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqrkb"]
+size = Vector2(0, 0)
+
+[node name="InteractionArea" type="Area2D" groups=["interaction_area"]]
+collision_layer = 256
+collision_mask = 256
+script = ExtResource("1_judnf")
+metadata/_edit_group_ = true
+
+[node name="InputHintWrapper" type="CanvasLayer" parent="."]
+layer = 5
+visible = false
+script = ExtResource("2_i6mml")
+
+[node name="InputHint" type="HBoxContainer" parent="InputHintWrapper"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_top = -130.0
+offset_right = 44.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 6
+
+[node name="Label" type="Label" parent="InputHintWrapper/InputHint"]
+offset_right = 76.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.0588235, 0.129412, 0.25098, 1)
+theme_override_fonts/font = ExtResource("2_ua6k1")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_clqyg")
+text = "Enter"
+
+[node name="Content" type="Label" parent="InputHintWrapper/InputHint"]
+offset_left = 82.0
+offset_top = 4.0
+offset_right = 122.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_ua6k1")
+theme_override_font_sizes/font_size = 20
+text = "交互"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gqrkb")
+metadata/_edit_lock_ = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

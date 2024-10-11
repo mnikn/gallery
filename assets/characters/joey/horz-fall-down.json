@@ -1,0 +1,19 @@
+{
+  "frames": [
+    {
+      "frame": 1,
+      "duration": 500,
+      "collision": {
+        "x": 11,
+        "y": 20,
+        "width": 27,
+        "height": 14,
+        "shapeType": "retangle"
+      }
+    }
+  ],
+  "animation": {
+    "loop": false,
+    "img": "C:\\game_projects\\snow-mountain-14-days\\assets\\characters\\joey\\horz-fall-down.png"
+  }
+}

@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://jj5op6k4vy6o"]
+
+[ext_resource type="PackedScene" uid="uid://niftqhxmw02w" path="res://src/pages/house/house.tscn" id="1_5xsm4"]
+
+[node name="HouseJoeyComeback" instance=ExtResource("1_5xsm4")]
+initial_storylet = "house.events.joey_comeback_talk"
+
+[node name="Laisha" parent="." index="7"]
+position = Vector2(848, 376)
+
+[node name="InteractionArea" parent="Laisha" index="3"]
+storylets = ["house.talk_laisha_with_joey1", "house.talk_laisha_find_food"]
+
+[node name="Joey" parent="." index="8"]
+position = Vector2(800, 528)
+motion_mode = 1
+
+[node name="InteractionArea" parent="Joey" index="3"]
+metadata/_edit_lock_ = true
+
+[node name="Shenqi" parent="." index="9"]
+position = Vector2(896, 536)
+
+[editable path="Laisha"]
+[editable path="Laisha/InteractionArea"]
+[editable path="Joey"]
+[editable path="Joey/InteractionArea"]
+[editable path="Shenqi"]
+[editable path="Shenqi/InteractionArea"]
+[editable path="Interactions/Window"]
+[editable path="Interactions/Underground"]
+[editable path="Interactions/Bookcase"]
+[editable path="Interactions/Outside"]
+[editable path="Interactions/FirePlace"]
+[editable path="Interactions/Table"]

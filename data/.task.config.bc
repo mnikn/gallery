@@ -1,0 +1,99 @@
+{
+  "schema": {
+    "type": "object",
+    "config": {
+      "colSpan": 12,
+      "enableWhen": null,
+      "initialExpand": false,
+      "summary": "#{{___index}} {{id}} - {{name}} - {{target_storylet}}",
+      "defaultValue": {
+        "id": "",
+        "name": "b17936f02929-42b5-af0d-4384d7aa7d4d",
+        "desc": "8348ebdfc955-446f-a7f0-6e6182956f24",
+        "target_storylet": ""
+      }
+    },
+    "fields": {
+      "id": {
+        "name": "id",
+        "type": "string",
+        "config": {
+          "colSpan": 3,
+          "defaultValue": "",
+          "enableWhen": null,
+          "required": false,
+          "customValidate": null,
+          "customValidateErrorText": "",
+          "helperText": "",
+          "type": "singleline",
+          "template": null,
+          "minLen": 0,
+          "maxLen": 9007199254740991,
+          "height": "200px",
+          "needI18n": false,
+          "codeLang": ""
+        }
+      },
+      "name": {
+        "name": "name",
+        "type": "string",
+        "config": {
+          "colSpan": 3,
+          "defaultValue": "",
+          "enableWhen": null,
+          "required": false,
+          "customValidate": null,
+          "customValidateErrorText": "",
+          "helperText": "",
+          "type": "singleline",
+          "template": null,
+          "minLen": 0,
+          "maxLen": 9007199254740991,
+          "height": "200px",
+          "needI18n": true,
+          "codeLang": ""
+        }
+      },
+      "desc": {
+        "name": "desc",
+        "type": "string",
+        "config": {
+          "colSpan": 3,
+          "defaultValue": "",
+          "enableWhen": null,
+          "required": false,
+          "customValidate": null,
+          "customValidateErrorText": "",
+          "helperText": "",
+          "type": "multiline",
+          "template": null,
+          "minLen": 0,
+          "maxLen": 9007199254740991,
+          "height": "200px",
+          "needI18n": true,
+          "codeLang": ""
+        }
+      },
+      "target_storylet": {
+        "name": "target_storylet",
+        "type": "string",
+        "config": {
+          "colSpan": 3,
+          "defaultValue": "",
+          "enableWhen": null,
+          "required": false,
+          "customValidate": null,
+          "customValidateErrorText": "",
+          "helperText": "",
+          "type": "singleline",
+          "template": null,
+          "minLen": 0,
+          "maxLen": 9007199254740991,
+          "height": "200px",
+          "needI18n": false,
+          "codeLang": ""
+        }
+      }
+    }
+  }
+}

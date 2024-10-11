@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlbawqksihdrj"]
+
+[sub_resource type="Gradient" id="Gradient_aiach"]
+offsets = PackedFloat32Array(0, 0.144172, 0.340491, 1)
+colors = PackedColorArray(0.0862745, 0.176471, 0.380392, 0.439216, 0.172549, 0.254902, 0.439216, 0.129412, 0.294118, 0.364706, 0.521569, 0.0392157, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ya1jq"]
+gradient = SubResource("Gradient_aiach")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8q5p"]
+texture = SubResource("GradientTexture2D_ya1jq")
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="Gradient" id="Gradient_0gsy8"]
+offsets = PackedFloat32Array(0, 0.144172, 0.340491, 1)
+colors = PackedColorArray(0.0862745, 0.176471, 0.380392, 0.439216, 0.172549, 0.254902, 0.439216, 0.129412, 0.294118, 0.364706, 0.521569, 0.0392157, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g3ucw"]
+gradient = SubResource("Gradient_0gsy8")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5f8s4"]
+texture = SubResource("GradientTexture2D_g3ucw")
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="TherateModeBarContainer" type="CanvasLayer"]
+layer = 20
+
+[node name="TherateModeBar" type="Control" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TherateModeBar"]
+offset_right = 1280.0
+offset_bottom = 54.0
+theme_override_constants/separation = 0
+
+[node name="ColorRect" type="ColorRect" parent="TherateModeBar/VBoxContainer"]
+custom_minimum_size = Vector2(0, 42)
+offset_right = 1280.0
+offset_bottom = 42.0
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="Panel" type="Panel" parent="TherateModeBar/VBoxContainer"]
+custom_minimum_size = Vector2(0, 12)
+offset_top = 42.0
+offset_right = 1280.0
+offset_bottom = 54.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n8q5p")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TherateModeBar"]
+offset_top = 666.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(0, 54)
+theme_override_constants/separation = 0
+
+[node name="Panel" type="Panel" parent="TherateModeBar/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 12)
+offset_right = 1280.0
+offset_bottom = 12.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5f8s4")
+
+[node name="ColorRect" type="ColorRect" parent="TherateModeBar/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 42)
+offset_top = 12.0
+offset_right = 1280.0
+offset_bottom = 54.0
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)

@@ -1,0 +1,40 @@
+{
+  "frames": [
+    {
+      "frame": 1,
+      "duration": 150
+    },
+    {
+      "frame": 2,
+      "duration": 150
+    },
+    {
+      "frame": 3,
+      "duration": 150
+    },
+    {
+      "frame": 4,
+      "duration": 150
+    },
+    {
+      "frame": 5,
+      "duration": 150
+    },
+    {
+      "frame": 6,
+      "duration": 150
+    },
+    {
+      "frame": 7,
+      "duration": 150
+    },
+    {
+      "frame": 8,
+      "duration": 150
+    }
+  ],
+  "animation": {
+    "loop": false,
+    "img": "C:\\game_projects\\snow-mountain-14-days\\assets\\characters\\shenqi\\down-getup-full.png"
+  }
+}

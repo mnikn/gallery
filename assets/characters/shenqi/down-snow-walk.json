@@ -1,0 +1,74 @@
+{
+  "frames": [
+    {
+      "frame": 1,
+      "duration": 250,
+      "collision": {
+        "x": 16,
+        "y": 8,
+        "width": 17,
+        "height": 38,
+        "shapeType": "retangle"
+      }
+    },
+    {
+      "frame": 2,
+      "duration": 250,
+      "collision": {
+        "x": 16,
+        "y": 8,
+        "width": 17,
+        "height": 38,
+        "shapeType": "retangle"
+      }
+    },
+    {
+      "frame": 3,
+      "duration": 500,
+      "collision": {
+        "x": 16,
+        "y": 8,
+        "width": 17,
+        "height": 38,
+        "shapeType": "retangle"
+      }
+    },
+    {
+      "frame": 4,
+      "duration": 250,
+      "collision": {
+        "x": 16,
+        "y": 8,
+        "width": 17,
+        "height": 38,
+        "shapeType": "retangle"
+      }
+    },
+    {
+      "frame": 5,
+      "duration": 250,
+      "collision": {
+        "x": 16,
+        "y": 8,
+        "width": 17,
+        "height": 38,
+        "shapeType": "retangle"
+      }
+    },
+    {
+      "frame": 6,
+      "duration": 500,
+      "collision": {
+        "x": 16,
+        "y": 8,
+        "width": 17,
+        "height": 38,
+        "shapeType": "retangle"
+      }
+    }
+  ],
+  "animation": {
+    "loop": true,
+    "img": "C:\\game_projects\\snow-mountain-14-days\\assets\\characters\\shenqi\\down-snow-walk.png"
+  }
+}

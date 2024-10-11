@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://mrh6gyl2clqd"]
+
+[ext_resource type="PackedScene" uid="uid://niftqhxmw02w" path="res://src/pages/house/house.tscn" id="1_8fmlb"]
+
+[node name="FirstTalkSituation" instance=ExtResource("1_8fmlb")]
+initial_storylet = "house.events.first_talk_situation"
+
+[node name="Laisha" parent="." index="7"]
+position = Vector2(712, 368)
+
+[node name="Joey" parent="." index="8"]
+position = Vector2(552, 368)
+
+[node name="Shenqi" parent="." index="9"]
+position = Vector2(632, 312)
+
+[editable path="Laisha"]
+[editable path="Laisha/InteractionArea"]
+[editable path="Joey"]
+[editable path="Joey/InteractionArea"]
+[editable path="Shenqi"]
+[editable path="Shenqi/InteractionArea"]
+[editable path="Interactions/Window"]
+[editable path="Interactions/Underground"]
+[editable path="Interactions/Bookcase"]
+[editable path="Interactions/Outside"]
+[editable path="Interactions/FirePlace"]
+[editable path="Interactions/Table"]

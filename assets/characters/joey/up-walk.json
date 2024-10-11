@@ -1,0 +1,19 @@
+{
+  "frames": [
+    {
+      "frame": 1,
+      "duration": 500,
+      "collision": {
+        "x": 18,
+        "y": 20,
+        "width": 13,
+        "height": 25,
+        "shapeType": "retangle"
+      }
+    }
+  ],
+  "animation": {
+    "loop": true,
+    "img": "C:\\game_projects\\snow-mountain-14-days\\assets\\characters\\joey\\up-walk.png"
+  }
+}

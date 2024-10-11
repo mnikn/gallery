@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c64dsjhxr1xl1"]
+
+[ext_resource type="Script" path="res://src/components/aseprite_character.gd" id="1_iqgqo"]
+[ext_resource type="Script" path="res://src/components/aseprite_animation_sprite.gd" id="2_7p6n0"]
+
+[node name="AsepriteCharacter" type="CharacterBody2D"]
+position = Vector2(472, 288)
+scale = Vector2(3, 3)
+script = ExtResource("1_iqgqo")
+character_path = "res://assets/characters/shenqi"
+enabled = true
+input_control = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+script = ExtResource("2_7p6n0")
+
+[node name="Collsion" type="CollisionShape2D" parent="."]

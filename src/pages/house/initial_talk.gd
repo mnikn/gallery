@@ -1,0 +1,1 @@
+extends "./house.gd"

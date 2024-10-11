@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6qavxone11e7"]
+
+[ext_resource type="PackedScene" uid="uid://niftqhxmw02w" path="res://src/pages/house/house.tscn" id="1_nrsil"]
+[ext_resource type="Script" path="res://src/pages/house/initial_talk.gd" id="2_v3vho"]
+
+[node name="InitialTalk" instance=ExtResource("1_nrsil")]
+script = ExtResource("2_v3vho")
+initial_storylet = "house.events.initial_talk"
+
+[node name="InteractionArea" parent="Laisha" index="3"]
+storylets = ["house.laisha_talk"]
+
+[node name="Shenqi" parent="." index="9"]
+position = Vector2(1096, 336)
+
+[node name="Window" parent="Interactions" index="0"]
+storylets = ["house.windows"]
+
+[node name="Underground" parent="Interactions" index="1"]
+storylets = ["house.underground_collect_fuel"]
+
+[node name="Bookcase" parent="Interactions" index="2"]
+storylets = ["house.bookcase_collect_fuel"]
+
+[node name="Outside" parent="Interactions" index="3"]
+storylets = ["house.outside_ban_collect_fuel"]
+
+[node name="Table" parent="Interactions" index="5"]
+storylets = ["house.table_collect_fuel"]
+
+[editable path="Laisha"]
+[editable path="Laisha/InteractionArea"]
+[editable path="Joey"]
+[editable path="Joey/InteractionArea"]
+[editable path="Shenqi"]
+[editable path="Shenqi/InteractionArea"]
+[editable path="Interactions/Window"]
+[editable path="Interactions/Underground"]
+[editable path="Interactions/Bookcase"]
+[editable path="Interactions/Outside"]
+[editable path="Interactions/FirePlace"]
+[editable path="Interactions/Table"]

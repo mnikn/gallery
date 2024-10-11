@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbfqbrjpd1mkt"]
+
+[ext_resource type="Texture2D" uid="uid://cki64ui40i526" path="res://assets/ui/chat_panel/left-bottom.png" id="1_f566a"]
+[ext_resource type="Script" path="res://src/components/chat_panel.gd" id="1_ibudc"]
+[ext_resource type="FontFile" uid="uid://dje1ekj8n7ehe" path="res://assets/fonts/Noto_Sans_SC/NotoSansSC-Medium.otf" id="2_mfblp"]
+[ext_resource type="Texture2D" uid="uid://cos8tqovl2kkj" path="res://assets/ui/chat_panel/chat_panel_pointer.png" id="4_5bgk0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_41ug7"]
+
+[node name="ChatPanel" type="Panel"]
+texture_filter = 1
+offset_right = 368.0
+offset_bottom = 180.0
+pivot_offset = Vector2(184, 90)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_41ug7")
+script = ExtResource("1_ibudc")
+
+[node name="Bg" type="NinePatchRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -184.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("1_f566a")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+
+[node name="Name" type="RichTextLabel" parent="."]
+offset_left = 25.0
+offset_top = 9.0
+offset_right = 145.0
+offset_bottom = 39.0
+theme_override_colors/default_color = Color(0.505882, 0.592157, 0.588235, 1)
+theme_override_fonts/normal_font = ExtResource("2_mfblp")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+scroll_active = false
+
+[node name="Pointer" type="TextureRect" parent="."]
+visible = false
+offset_left = 324.0
+offset_top = 133.0
+offset_right = 336.0
+offset_bottom = 143.0
+texture = ExtResource("4_5bgk0")
+
+[node name="ContentWrapper" type="VBoxContainer" parent="."]
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 333.0
+offset_bottom = 133.0
+
+[node name="Content" type="RichTextLabel" parent="ContentWrapper"]
+offset_right = 308.0
+offset_bottom = 83.0
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.223529, 0.290196, 0.313726, 1)
+theme_override_fonts/normal_font = ExtResource("2_mfblp")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "（该怎么样跟这个小孩说呢？）"
+scroll_active = false
+
+[node name="Options" type="VBoxContainer" parent="."]
+offset_left = 25.0
+offset_top = 84.0
+offset_right = 333.0
+offset_bottom = 188.0
+alignment = 1
