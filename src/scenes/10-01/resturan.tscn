@@ -53,7 +53,6 @@ collision_mask = 17
 script = ExtResource("2_abarv")
 character_texture_path = "res://assets/characters/shenqi"
 enabled = true
-input_control = true
 metadata/_edit_group_ = true
 
 [node name="Sprite" type="Sprite2D" parent="Shenqi"]
@@ -89,4 +88,50 @@ layout_mode = 2
 position = Vector2(0, 15)
 shape = SubResource("RectangleShape2D_ungab")
 
+[node name="Shenqi2" type="CharacterBody2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(945, 512)
+collision_mask = 17
+script = ExtResource("2_abarv")
+character_texture_path = "res://assets/characters/shenqi"
+enabled = true
+input_control = true
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="Shenqi2"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("3_guqdh")
+script = ExtResource("4_ibsn5")
+
+[node name="Camera2D" type="Camera2D" parent="Shenqi2"]
+enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 3008
+limit_bottom = 2240
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+rotation_smoothing_enabled = true
+
+[node name="Collision" type="CollisionShape2D" parent="Shenqi2"]
+position = Vector2(0, 21.75)
+shape = SubResource("RectangleShape2D_vpo8k")
+
+[node name="InteractionArea" parent="Shenqi2" instance=ExtResource("5_mgfgy")]
+monitoring = false
+
+[node name="Label" parent="Shenqi2/InteractionArea/InputHintWrapper/InputHint" index="0"]
+layout_mode = 2
+
+[node name="Content" parent="Shenqi2/InteractionArea/InputHintWrapper/InputHint" index="1"]
+layout_mode = 2
+
+[node name="Collision" parent="Shenqi2/InteractionArea" index="1"]
+position = Vector2(0, 15)
+shape = SubResource("RectangleShape2D_ungab")
+
 [editable path="Shenqi/InteractionArea"]
+[editable path="Shenqi2/InteractionArea"]
